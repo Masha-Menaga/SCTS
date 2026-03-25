@@ -44,8 +44,8 @@ fetch(sheetURL)
       div.innerHTML = `
         ${index < 2 ? '<span class="new-badge">NEW</span>' : ''}
         <h4>📘 ${job["Job Title"]}</h4>
-        <p>${job["Job Description"]}</p>
-        <small>🏫 ${job["Department"]}</small>
+        <p>${job["Department"]}</p>
+        <small>🏫 ${job["Branch"]}</small>
         <a href="${seekerForm}" target="_blank" class="apply-btn">Apply Now</a>
       `;
 

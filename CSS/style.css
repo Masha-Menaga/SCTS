@@ -147,3 +147,20 @@ h3 {
         transform: translateY(-50%);
     }
 }
+
+.jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#viewAllLink {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #1e3c72;
+    cursor: pointer;
+}
+#viewAllLink:hover {
+    color: #0d1a40;
+}
