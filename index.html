@@ -3,37 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>School Job Portal</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./CSS/style.css">
 
-<!-- PWA SETTINGS -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2c3e50">
-<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#1e3c72">
 
 </head>
+
 <body>
 
-<div class="container">
-    <img src="school-logo.png" alt="School Logo" class="logo">
-
-    <h1>Welcome to School Job Portal</h1>
-
-    <div class="button-group">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg-qbBpfglQb3-7fnsF1_KtXtjqEvel1guDbRPte2nTgjaug/viewform" target="_blank" class="btn">Job Seeker</a>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmsT2m0r7ecU1zAeCTKfNWoBfkRFoH2Xwg25W_n00d5nLbFw/viewform" target="_blank" class="btn">Job Giver</a>
-    </div>
+<!-- HEADER -->
+<div class="header">
+    <img src="./assets/Logo.jpg" class="logo">
+    <h2>🌱 Shape Young Minds with Us</h2>
+    <p class="des">Join our school team or hire the right talent</p>
 </div>
 
-<!-- SERVICE WORKER -->
+<!-- BUTTONS -->
+<div class="action-buttons">
+    <button class="btn seeker" onclick="goToSeeker()"> Job Seeker</button>
+    <button class="btn giver" onclick="showPassword()"> Job Giver</button>
+</div>
+
+<!-- PASSWORD -->
+<div id="passwordBox" class="password-box">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkPassword()" class="sub-button">Submit</button>
+</div>
+
+<!-- JOBS -->
+<h3>📢 Latest Vacancies</h3>
+<div class="jobs-wrapper">
+    <div id="jobs" class="jobs-container scroll"></div>
+</div>
+
+<script src="./JS/script.js"></script>
+
 <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js")
-    .then(function() {
-      console.log("Service Worker Registered");
-    });
+  navigator.serviceWorker.register("./JS/service-worker.js");
 }
 </script>
 
